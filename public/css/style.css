@@ -98,3 +98,16 @@ header, .project:not(:last-child) {
 .footer-margin{
   margin-top: 50px;
 }
+
+.signup{
+  margin-top: 20px;
+}
+
+.signup-form div{
+  margin-bottom: 20px;
+}
+
+.register{
+  display: inline-block;
+  margin-top: 20px;
+}
