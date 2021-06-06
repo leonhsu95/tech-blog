@@ -22,3 +22,31 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.post{
+  margin: 20px 0;
+  border: 1px lightgrey solid;
+  text-align: right;
+}
+
+.post-title{
+  background-color: lightgrey;
+  padding: 15px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.post-text{
+  padding: 10px;
+  text-align: left;
+}
+
+.post-button{
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-margin{
+  margin-top: 50px;
+}
