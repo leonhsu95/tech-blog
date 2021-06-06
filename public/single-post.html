@@ -27,23 +27,30 @@
 
     <main class="container">
             <!-- {{{ body }}} -->
-              
-    <h2 class="title pb-4">Log In:</h2><hr>
-    <form class="login-form">
-     <div class="mb-3">
-        <label for="email-login" class="form-label">Email:</label>
-        <input type="text" id="email-login" class="form-control"/>
-      </div>
-      <div class="mb-3">
-        <label for="password-login" class="form-label">Password:</label>
-        <input type="password" id="password-login" class="form-control"/>
-      </div>
-      <div class="mb-3">
-        <button type="submit" class="btn btn-primary register">Log In</button>
-      </div>
-    </form>
- 
-            
+            <div class="row mb-1">
+                                 
+                   <!-- displaying articles -->
+                  {{> post-info post}}
+                  
+                  <!-- displaying form and comments-->
+                  <!-- only display if logged in -->
+                  {{#if loggedIn}}
+                  <form class="comment-form">
+                    <div class="mb-3">
+                      <textarea class="form-control" name="comment-body"></textarea>
+                    </div>
+                  
+                    <div class="mb-3">
+                      <button class="btn is-warning ml-5 mb-5 comment-button" type="submit">Add Comment</button>
+                    </div>
+                    
+                  </form>
+                  {{/if}}
+                  
+                  {{> comments post.comments}}
+
+                    
+            </div>
     </main>
 
 <footer class="footer rows footer-margin">
@@ -62,7 +69,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="js/login.js"></script>
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
 </body>
 
 </html>

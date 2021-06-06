@@ -27,23 +27,24 @@
 
     <main class="container">
             <!-- {{{ body }}} -->
-              
-    <h2 class="title pb-4">Log In:</h2><hr>
-    <form class="login-form">
-     <div class="mb-3">
-        <label for="email-login" class="form-label">Email:</label>
-        <input type="text" id="email-login" class="form-control"/>
-      </div>
-      <div class="mb-3">
-        <label for="password-login" class="form-label">Password:</label>
-        <input type="password" id="password-login" class="form-control"/>
-      </div>
-      <div class="mb-3">
-        <button type="submit" class="btn btn-primary register">Log In</button>
-      </div>
-    </form>
- 
-            
+            <div class="row mb-1">
+                <a href="/dashboard" class=""> &larr; Dashboard</a>
+                <h1>Edit Post</h1>
+                <form class="edit-post-form">
+                    <div class="mb-3">
+                       <label for="post-title" class="form-label">Post Title:</label>
+                       <input type="text" name="post-title" id="email-signup" class="form-control input" value="{{post.title}}"/>
+                     </div>
+                     <div class="mb-3">
+                       <label for="post-content" class="form-label">Content</label>
+                       <input class="textarea form-control" name="post-content" type="text" value="{{post.post_content}}" />
+                     </div>
+                     <div class="mb-3">
+                       <button type="submit" class="btn is-success">Save</button>
+                       <button type="button" class="btn is-danger delete-post-btn">Delete</button>
+                     </div>
+                   </form>
+            </div>
     </main>
 
 <footer class="footer rows footer-margin">
@@ -62,7 +63,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="js/login.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
 </body>
 
 </html>
