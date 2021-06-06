@@ -23,9 +23,25 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
-.navbar{
+.navbar {
   text-align: right;
 }
+
+.navbar a{
+  text-decoration: none;
+  margin: 0 5px
+}
+
+.navbar a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .logout{
   background-color: lightskyblue;
