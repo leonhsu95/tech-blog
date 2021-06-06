@@ -23,6 +23,26 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+.navbar{
+  text-align: right;
+}
+
+.logout{
+  background-color: lightskyblue;
+  border: 1px lightskyblue solid;
+  color: white;
+  font-weight: bold;
+}
+
+.login{
+  display: inline-block;
+  background-color: rebeccapurple;
+  border: 1px rebeccapurple solid;
+  color: white;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+
 .post{
   margin: 20px 0;
   border: 1px lightgrey solid;
@@ -43,8 +63,20 @@ header, .project:not(:last-child) {
 
 .post-button{
   text-align: right;
+  margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+.post-date{
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.post-username{
+  font-weight: bold;
 }
 
 .footer-margin{
