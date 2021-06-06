@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +13,15 @@
     <header id="home">
         <h1 class="">The Tech Word</h1>
         <nav class="navbar">
-            <!-- {{#if loggedIn}} -->
+            {{#if loggedIn}}
             <a href="/" class="navbar-item">homepage</a>
             <a href="/dashboard" class="navbar-item">dashboard</a>
             <a href="/dashboard/create/" class="navbar-item">create post</a>
             <button id="logout" class="button logout">logout</button>
-            <!-- {{else}} -->
+            {{else}}
             <a href="/" class="navbar-item pt-1">homepage</a>
             <a href="/login" class="button login">login</a>
-            <!-- {{/if}} -->
+            {{/if}}
         </nav>
     </header>
 
