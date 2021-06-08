@@ -64,10 +64,7 @@ router.post('/', (req, res) => {
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.username = userData.username;
-        req.session.twitter = userData.twitter;
-        req.session.github = userData.github;
         req.session.loggedIn = true;
-    
         res.json(userData);
       });
     });
@@ -96,8 +93,6 @@ router.post('/', (req, res) => {
         // declare session variables
         req.session.user_id = userData.id;
         req.session.username = userData.username;
-        req.session.twitter = userData.twitter;
-        req.session.github = userData.github;
         req.session.loggedIn = true;
   
         res.json({ user: userData, message: 'You are now logged in!' });

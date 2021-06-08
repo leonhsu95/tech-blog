@@ -127,3 +127,9 @@ header, .project:not(:last-child) {
 .comment-button{
   margin-top: 20px;
 }
+
+#signup button{
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+}

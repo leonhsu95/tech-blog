@@ -1,0 +1,26 @@
+<div class="container row">
+   <div class="row mb-1">
+        <a href="/dashboard" class=""> &larr; Dashboard</a>
+        <h1>Edit Post</h1>
+        <form class="edit-post-form">
+            <div class="mb-3">
+               <label for="post-title" class="form-label">Post Title:</label>
+               <input type="text" name="post-title" id="email-signup" class="form-control input" value="{{post.title}}"/>
+             </div>
+             <div class="mb-3">
+               <label for="post-content" class="form-label">Content</label>
+               <input class="textarea form-control" name="post-content" type="text" value="{{post.post_content}}" />
+             </div>
+             <div class="mb-3">
+               <button type="submit" class="btn is-success">Save</button>
+               <button type="button" class="btn is-danger delete-post-btn">Delete</button>
+             </div>
+           </form>
+    </div>
+</div>
+
+{{> comments post.comments}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
