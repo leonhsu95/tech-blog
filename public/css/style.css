@@ -73,8 +73,8 @@ header, .project:not(:last-child) {
 }
 
 .post-text{
-  padding: 10px;
-  text-align: left;
+  padding: 10px !important;
+  text-align: left !important;
 }
 
 .post-button{

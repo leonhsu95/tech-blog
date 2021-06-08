@@ -6,17 +6,24 @@ router.get('/', (req, res) => {
     console.log(req.session);
     
     Post.findAll({
+      attributes: [
+        'id',
+        'title',
+        'created_at',
+        'post_content'
+      ],
       include: [
         {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
-            model: User
-
+            model: User,
+            attributes: ['username']
           }
         },
         {
-          model: User
+          model: User,
+          attributes: ['username']
         }
       ]
     })
@@ -26,6 +33,7 @@ router.get('/', (req, res) => {
             posts,
             loggedIn: req.session.loggedIn
           });
+        // res.status(200).json(posts);
       })
       .catch(err => {
         console.log(err);
@@ -67,12 +75,13 @@ router.get('/login', (req, res) => {
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
-            model: User
-
+            model: User,
+            attributes: ['username']
           }
         },
         {
-          model: User
+          model: User,
+          attributes: ['username']
         }
       ]
     })
