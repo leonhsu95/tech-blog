@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
     })
-      .then(userData => res.json(userData))
+      .then(dbUserData => res.json(dbUserData))
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -38,12 +38,12 @@ router.get('/:id', (req, res) => {
           ]
 
     })
-      .then(userData => {
-        if (!userData) {
+      .then(dbUserData => {
+        if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
-        res.json(userData);
+        res.json(dbUserData);
       })
       .catch(err => {
         console.log(err);
@@ -56,16 +56,15 @@ router.post('/', (req, res) => {
     User.create({
       username: req.body.username,
       email: req.body.email,
-      password: req.body.password,
-      twitter: req.body.twitter,
-      github: req.body.github
+      password: req.body.password
     })
-    .then(userData => {
+    .then(dbUserData => {
       req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.username = userData.username;
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-        res.json(userData);
+    
+        res.json(dbUserData);
       });
     });
   });
@@ -76,13 +75,13 @@ router.post('/', (req, res) => {
       where: {
         email: req.body.email
       }
-    }).then(userData => {
-      if (!userData) {
+    }).then(dbUserData => {
+      if (!dbUserData) {
         res.status(400).json({ message: 'No user with that email address!' });
         return;
       }
   
-      const validPassword = userData.checkPassword(req.body.password);
+      const validPassword = dbUserData.checkPassword(req.body.password);
   
       if (!validPassword) {
         res.status(400).json({ message: 'Incorrect password!' });
@@ -91,11 +90,11 @@ router.post('/', (req, res) => {
   
       req.session.save(() => {
         // declare session variables
-        req.session.user_id = userData.id;
-        req.session.username = userData.username;
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
         req.session.loggedIn = true;
   
-        res.json({ user: userData, message: 'You are now logged in!' });
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });
   });
@@ -120,12 +119,12 @@ router.put('/:id', withAuth, (req, res) => {
             id: req.params.id
       }
     })
-      .then(userData => {
-        if (!userData[0]) {
+      .then(dbUserData => {
+        if (!dbUserData[0]) {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
-        res.json(userData);
+        res.json(dbUserData);
       })
       .catch(err => {
         console.log(err);
@@ -140,12 +139,12 @@ router.delete('/:id', withAuth, (req, res) => {
         id: req.params.id
       }
     })
-      .then(userData => {
-        if (!userData) {
+      .then(dbUserData => {
+        if (!dbUserData) {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
-        res.json(userData);
+        res.json(dbUserData);
       })
       .catch(err => {
         console.log(err);
