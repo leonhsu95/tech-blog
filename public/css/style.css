@@ -70,23 +70,6 @@ header, .project:not(:last-child) {
   color: inherit;
 }
 
-/* 
-.logout{
-  background-color: lightskyblue;
-  border: 1px lightskyblue solid;
-  color: white;
-  font-weight: bold;
-}
-
-.login{
-  display: inline-block;
-  background-color: rebeccapurple;
-  border: 1px rebeccapurple solid;
-  color: white;
-  padding: 2px 5px;
-  font-weight: bold;
-} */
-
 .post{
   margin: 20px 0;
   border: 1px lightgrey solid;
@@ -100,8 +83,13 @@ header, .project:not(:last-child) {
   text-align: left;
 }
 
+.post-title a:link{
+  color: #617ab7;
+  text-decoration: none;
+}
+
 .post-title a:visited{
-  color: inherit;
+  color: #617ab7;
   text-decoration: none;
 }
 
@@ -131,6 +119,12 @@ header, .project:not(:last-child) {
 
 .post-username{
   font-weight: bold;
+}
+
+.dashboard-container{
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .footer-margin{
