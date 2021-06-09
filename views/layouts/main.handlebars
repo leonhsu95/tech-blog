@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,43 +9,44 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
-  <div class="container .col-12">
-    <header id="home">
-        <h1 class=""><a href="/" class="navbar-item pt-1">The Tech Word</a></h1>
-        <nav class="navbar">
-            {{#if loggedIn}}
-            <a href="/" class="navbar-item">homepage</a>
-            <a href="/dashboard" class="navbar-item">dashboard</a>
-            <a href="/dashboard/create/" class="navbar-item">create post</a>
-            <button id="logout" class="button logout">logout</button>
-            {{else}}
-            <a href="/" class="navbar-item pt-1">homepage</a>
-            <a href="/login" class="button login">login</a>
-            {{/if}}
-        </nav>
-    </header>
+<div class="container .col-12">
+<body>
 
-    <main class="container">
-            {{{ body }}}
-    </main>
+<header class="row">
+  <h1><a class="logo" href="/">The Tech Word</a></h1>
+      <nav>
+        <ul class="navbar">
+              <li><a class="link" href="/">Home</a></li>
+               <li><a class="link" href="/dashboard">Dashboard</a></li>
+              {{#if loggedIn}}
+               <li><a class="link" href="/" id="logout">Logout</a></li>
+              {{else}}
+               <li><a class="link" href="/login">Login</a></li>
+              {{/if}}
+        </ul>
+      </nav>
 
-<footer class="footer rows footer-margin">
-        {{!-- <div class="row">
-            <p>
-            <a href="#home">Back to Top</a>
-            </p>
-        </div> --}}
-      <div class="row">
-    <p>
-      The Tech Word by <a href="https://github.com/leonhsu95"> Leon Hsu</a>
-    </p>
-  </div>
-    </footer>
-  </div>
+    
+</header>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<script src="js/logout.js"></script>
+<main>
+  {{{ body }}}
+</main>
+
+<footer class="footer">
+    <div class="row">
+        <p>
+          The Tech Word by <a href="https://github.com/leonhsu95"> Leon Hsu</a>
+        </p>
+    </div>
+</footer>
+
+    {{#if loggedIn}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
 </body>
-
+</div>
 </html>

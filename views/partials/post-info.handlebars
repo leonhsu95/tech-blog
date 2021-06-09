@@ -1,12 +1,9 @@
-    <div class="container row">
-            <div class="card post">
-                <div class="card-body post-body">
-            <h4 class="card-title post-title"><a href="/post/{{id}}">{{title}} </a></h4>
-            <p class="card-text post-text">
-            {{post_content}}
-            </p>
-            {{!-- <a href="/post/{{id}}" class="btn btn-primary post-button">View Post</a> --}}
-                  <p class="post-date">Posted On: {{format_date created_at}} by <span class="post-username">{{user.username}}</span></p>
-                </div>
-            </div>
+<div class="container row">
+    <div class="card-header">
+       <h4 class="card-title post-title"><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+        <div class="card-body post-body">
+        <p class="card-body post-content">{{content}}</p>
+        <p class="card-text post-author">Posted by <span class="post-username">{{user.username}}</span> on {{format_date created_at}}</p>
+        </div>
     </div>
+</div>

@@ -23,8 +23,33 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+.logo:link{
+  color: black;
+  text-decoration: none;
+}
+
+.logo:visited{
+  color: black;
+  text-decoration: none;
+}
+
+.logo:hover{
+  color: black;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: 0.5s ease-in-out;
+
+}
+
 .navbar {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  font-size: 1.5em;
+  
+  
 }
 
 .navbar a{
@@ -42,7 +67,7 @@ header, .project:not(:last-child) {
   color: inherit;
 }
 
-
+/* 
 .logout{
   background-color: lightskyblue;
   border: 1px lightskyblue solid;
@@ -57,7 +82,7 @@ header, .project:not(:last-child) {
   color: white;
   padding: 2px 5px;
   font-weight: bold;
-}
+} */
 
 .post{
   margin: 20px 0;
@@ -72,7 +97,17 @@ header, .project:not(:last-child) {
   text-align: left;
 }
 
-.post-text{
+.post-title a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-title a:hover{
+  text-decoration: none;
+  color: #0e506e;
+}
+
+.post-content{
   padding: 10px !important;
   text-align: left !important;
 }
@@ -84,7 +119,7 @@ header, .project:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.post-date{
+.post-author{
   text-align: right;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -132,4 +167,9 @@ header, .project:not(:last-child) {
   display: inline-block;
   margin-top: 20px;
   margin-left: 10px;
+}
+
+footer{
+  margin-top: 60px;
+  font-size: 1.4em;
 }
