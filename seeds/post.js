@@ -24,7 +24,7 @@ const postData = [
     },
     {
         title: "Google is making it harder for Android apps to track you once you’ve opted out",
-        content: "JIt’s going to get harder for Android apps to track users who’ve opted out of receiving personalized ads, the Financial Times reports, after Google announced changes to how it’ll handle the unique device identifiers that allow marketers to track them between apps. Starting later this year, Google is cutting off access to these “Advertising IDs” after a user opts out, and will show developers a “string of zeros” in its place.",
+        content: "It’s going to get harder for Android apps to track users who’ve opted out of receiving personalized ads, the Financial Times reports, after Google announced changes to how it’ll handle the unique device identifiers that allow marketers to track them between apps. Starting later this year, Google is cutting off access to these “Advertising IDs” after a user opts out, and will show developers a “string of zeros” in its place.",
         user_id: 4
     }
 ]
