@@ -87,6 +87,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Features
+- Posts are viewable and you can see the author and date of the post created.
+- You can freely Login and Sign Up to create new posts.
+- All posts made by the author are editable and can be deleted.
+- Logged in users can leave comments.
 
 
 ## Tests
