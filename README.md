@@ -1,6 +1,10 @@
 # Tech Blog
 
-Link to the deployed application can be tested here on Heroku: [Tech Blog](https://tech-blog-lh.herokuapp.com/) and the project repository can be viewed here: [Tech Blog](https://github.com/leonhsu95/tech-blog)
+Link to the deployed application can be tested here on Heroku: [Tech Blog](https://tech-blog-lh.herokuapp.com/) and the project repository can be viewed here: [Tech Blog](https://github.com/leonhsu95/tech-blog).
+
+Feel free to test by logging in with these credentials:
+Username: testUser
+Password: 1testUser23?
 
 ## Description
 
