@@ -1,10 +1,10 @@
 # Tech Blog
 
-Link to the deployed application can be tested here  [Tech Blog](https://github.com/leonhsu95/tech-blog) and the project repository can be viewed here: [Tech Blog](https://github.com/leonhsu95/tech-blog)
+Link to the deployed application can be tested here on Heroku: [Tech Blog](https://tech-blog-lh.herokuapp.com/) and the project repository can be viewed here: [Tech Blog](https://github.com/leonhsu95/tech-blog)
 
 ## Description
 
-This Tech Blog is a CMS style project utilising the MVC structure, routes, SQL and Handlebars templating. In this website, users can view/edit posts, leave comments login and register.
+This Tech Blog is a CMS style project utilising the MVC structure, routes, SQL and Handlebars templating. In this website, users can view/edit posts, leave comments login and register. Bootstrap is used as the primary CSS styling.
 
 ## Table of Contents
 - [Installation](#installation)
